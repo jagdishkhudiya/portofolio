@@ -1,0 +1,67 @@
+@import "../../Global.scss";
+
+.portofolio {
+  padding-top: 20px;
+  color: white;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 50px;
+  }
+
+  ul {
+    margin: 20px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  .container {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+
+    .item {
+      width: 350px;
+      height: 200px;
+      border-radius: 20px;
+      border: 10px solid #2c2c2c;
+      margin: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+      cursor: pointer;
+      transition: ease-in 0.5s;
+
+      h3 {
+        position: absolute;
+        font-size: 20px;
+        z-index: 2;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      &:hover {
+        background-color: #2c2c2c;
+        box-shadow: 0 3px 10px #ff5733;
+
+        img {
+          opacity: 0.1;
+          z-index: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.works {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .arrow {
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    transition: all 1s ease-out;
+
+    &.left {
+      left: 100px;
+      transform: rotateY(180deg);
+
+      &:hover {
+        height: 100px;
+      }
+    }
+
+    &.right {
+      right: 100px;
+
+      &:hover {
+        height: 100px;
+      }
+    }
+  }
+
+  .slider {
+    height: 500px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease-out;
+
+    .container {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      .item {
+        width: 1000px;
+        height: 100%;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .left {
+          flex: 4;
+          height: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .leftContainer {
+            width: 80%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            // .imgContainer {
+            //   width: 40px;
+            //   height: 40px;
+            //   border-radius: 50%;
+            //   background-color: #ffffff;
+            //   display: flex;
+            //   align-items: center;
+            //   justify-content: center;
+            // }
+
+            h2 {
+              font-size: 28px;
+              text-align: center;
+            }
+            p {
+              font-size: 16px;
+              text-align: center;
+            }
+          }
+        }
+
+        .right {
+          flex: 8;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+
+          img {
+            width: 650px;
+            border: 2px;
+            transform: rotate(-10dg);
+            transition: transform 1s ease;
+
+            &:hover {
+              transform: scale(1.3);
+            }
+          }
+        }
+      }
+    }
+  }
+}
